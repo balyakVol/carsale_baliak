@@ -1,0 +1,16 @@
+<form [formGroup]="filterForm">
+  <mat-form-field>
+    <mat-label>Марка</mat-label>
+    <mat-select formControlName="brand">
+      <mat-option value="">Всі</mat-option>
+      <mat-option *ngFor="let brand of brands" [value]="brand">{{ brand }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Макс. ціна ($)</mat-label>
+    <input matInput type="number" formControlName="maxPrice">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="applyFilters()">Фільтрувати</button>
+</form>

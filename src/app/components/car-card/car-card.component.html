@@ -1,0 +1,8 @@
+<mat-card class="car-card">
+  <img mat-card-image [src]="car.imageUrl" alt="{{car.brand}} {{car.model}}">
+  <mat-card-content>
+    <h2>{{car.brand}} {{car.model}}</h2>
+    <p>Рік: {{car.year}} | Пробіг: {{car.mileage}} км</p>
+    <p class="price">{{car.price | currency:'USD':'symbol'}}</p>
+  </mat-card-content>
+</mat-card>
